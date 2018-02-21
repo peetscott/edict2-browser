@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<project name="edict-browser" default="usage" basedir=".">
+
+  <condition property="minimize" value="-min">
+    <equals arg1="true" arg2="${min}"/>
+  </condition>
+
+  <target name="compile">
+    <javac srcdir="java"
+           destdir="."
+           includeAntRuntime="false">
+    </javac>
+  </target>
+
+  <target name="update" depends="compile">
+    <get src="ftp://ftp.edrdg.org/pub/Nihongo/edict2.gz"
+         dest="."
+         username="anonymous"
+         password=""
+         verbose="true">
+    </get>
+    <gunzip src="edict2.gz"
+            dest=".">
+    </gunzip>
+    <delete file="edict2.gz">
+    </delete>
+    <java classname="Setup"
+          classpath=".">
+      <arg value="${minimize}"/>
+    </java>
+  </target>
+
+  <target name="usage">
+    <echo>
+    compile        Compile the setup program.
+    update         Get the dictionary and run the setup program.
+    </echo>
+  </target>
+
+</project>

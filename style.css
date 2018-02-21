@@ -1,0 +1,290 @@
+.ui-button  {
+  display: inline;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-right: 5px;
+  border-radius: 3px;
+  font-family: "Arial";
+  cursor: pointer;
+}
+
+.ui-button-up.ui-button-hover  {
+  background-color: #cfcfcf;
+}
+
+.ui-button-up.ui-button-pressed  {
+  background-color: #efefef;
+}
+
+.ui-button-up.ui-button-hover.ui-button-pressed  {
+  background-color: #efefef;
+}
+
+.ui-button-down.ui-button-pressed  {
+  background-color: #efefef;
+}
+
+.ui-button-down.ui-button-hover.ui-button-pressed  {
+  background-color: #efefef;
+}
+
+.ui-button-down.ui-button-hover  {
+  background-color: #cfcfcf;
+}
+
+.ui-button-down  {
+  background-color: #dfdfdf;
+}
+
+.ui-button-up  {
+  background-color: #9f9f9f;
+}
+
+.ui-button-disabled  {
+  opacity: 0.5;
+  cursor: default;
+}
+
+.ui-ime-assist  {
+  position: absolute;
+  margin-top: 5px;
+  padding: 10px;
+  top: auto;
+  height: auto;
+  width: auto;
+  background-color: white;
+  border: 1px solid silver;
+  z-index: 1;
+}
+
+.ui-ime-assist div {
+  padding: 0 3px;
+  cursor: default;
+}
+
+.ui-ime-assist div:hover {
+  background-color: #dfdfdf;
+}
+
+/**********************************/
+
+.eb-page  {
+  /*
+  The scrollbar is causing the page to be redrawn in the middle
+  of the column-building routine, breaking the column-height
+  calculation. This forces the scrollbar to be permanently
+  deployed.
+  */
+  height: 704px;
+  /*background-color: goldenrod;*/
+}
+
+.eb-page-head  {
+  position: relative;
+  font-family: serif;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin-bottom: 10px;
+  font-size: 16pt;
+  line-height: 32px;
+  /*background-color: cornsilk;*/
+}
+
+.eb-page-head div[position="0"]  {
+  /*background-color: brown;*/
+}
+
+.eb-page-head div[position="1"]  {
+  position: absolute;
+  display: inline-block;
+  top: 0px;
+  right: 5px;
+  /*background-color: chocolate;*/
+}
+/*
+  For ~31 lines of text ...
+  line-height:
+  14px -> COLUMN_HEIGHT = 448
+  16px -> COLUMN_HEIGHT = 512
+  20px -> COLUMN_HEIGHT = 640
+  24px -> COLUMN_HEIGHT = 768
+
+*/
+.eb-page-col  {
+  display: inline-block;
+  width: 48%;
+  font-size: 10pt;
+  line-height: 16px;
+  padding-left: 5px;
+  padding-right: 5px;
+  /*background-color: aliceblue;*/
+}
+
+.eb-page-line {
+  /* inherit ?? */
+  /*line-height: inherit;*/
+  line-height: 16px;
+  /*background-color: gold;*/
+}
+
+.eb-page-sectionhead  {
+  font-size: 16pt;
+  line-height: 32px;
+  padding-left: 5px;
+  /*background-color: bisque;*/
+}
+
+#eb_page_col_lt  {
+  border-right: 1px solid black;
+}
+
+#eb_page_col_rt  {
+
+}
+
+.eb-page-entry,
+.eb-page-reading  {
+  font-family:  sans-serif;
+}
+
+.eb-page-entry,
+.eb-page-reading  {
+  /*font-family: "MS Gothic", sans-serif;*/
+}
+
+.eb-page-entry  {
+  cursor: default;
+  /*background-color: aqua;*/
+}
+.eb-page-entry:hover  {
+
+}
+
+
+.eb-page-reading  {
+  /*background-color: aquamarine;*/
+}
+
+.eb-page-partofspeech  {
+  /*background-color: coral;*/
+}
+
+.eb-page-defno  {
+  font-weight: bold;
+  /*background-color: fuchsia;*/
+}
+
+.eb-page-fieldofapp  {
+  /*background-color: lightsalmon;*/
+}
+
+.eb-page-miscmarking  {
+  /*background-color: palegreen;*/
+}
+
+.eb-page-languagename  {
+  /*background-color: cadetblue;*/
+}
+
+.eb-page-definitiontext  {
+  /*background-color: lightblue;*/
+}
+/*****************/
+
+.eb-page-partofspeech,
+.eb-page-defno,
+.eb-page-fieldofapp,
+.eb-page-miscmarking,
+.eb-page-languagename,
+.eb-page-definitiontext  {
+  font-family: "Times New Roman";
+}
+
+.eb-page-partofspeech,
+.eb-page-fieldofapp,
+.eb-page-miscmarking,
+.eb-page-languagename  {
+  font-style: italic;
+}
+
+/* These should found be in index.html. .. */
+#edict_browser  {
+
+}
+
+#eb_page  {
+
+}
+
+#eb_toolbar  {
+
+}
+/*******************************************/
+
+
+.eb-toolbar  {
+  border-bottom: 1px solid black;
+  padding-bottom: 3px;
+}
+
+.eb-toolbar-ime  {
+  display: inline-block;
+  margin-right: 5px;
+}
+
+.eb-toolbar-bookmarks  {
+  display: inline-block;
+}
+
+/* Combine with ui-ime-assist .. */
+.eb-toolbar-bookmarks-list  {
+  position: absolute;
+  margin-top: 5px;
+  padding: 10px;
+  top: auto;
+  height: auto;
+  width: auto;
+  background-color: white;
+  border: 1px solid silver;
+  z-index: 1;
+  background-color: white;
+}
+
+.eb-toolbar-bookmarks-list div {
+  padding: 0 3px;
+  cursor: default;
+}
+
+.eb-toolbar-bookmarks-list div:hover {
+  background-color: #dfdfdf;
+}
+
+.eb-toolbar-bookmarks-list div span {
+  padding-left: 10px;
+}
+
+/*******************************/
+
+#eb_mag_div  {
+  position: absolute;
+  font-size: 24pt;
+  background-color: white;
+  padding: 5px;
+  border: 1px solid black;
+  display: none;
+}
+
+#eb_toolbar_status_div  {
+  position: absolute;
+  display: inline-block;
+  right: 5px;
+  margin-right: 5px;
+  font-family: "Times New Roman", serif;
+  font-size: 14pt;
+}
+
+.warn  {
+  color: red;
+  font-family: "Arial";
+  font-weight: bold;
+}
